@@ -1,0 +1,56 @@
+npm start
+sudo npm install -g firebase-tools
+firebase login
+firebase init
+
+Select Hosting.
+Select the project you want to link.
+Set your build folder as your public directory.
+Configure as a single-page app by answering yes to the question.
+
+Build for prod and deploy:
+
+npm run build
+firebase deploy
+
+Use the URL from the server to fetch:
+const response = await fetch(`https://your-flask-api.com/data?size=${gridSize}`);
+
+
+For free server:
+
+Install the Heroku CLI.
+curl https://cli-assets.heroku.com/install.sh | sh
+heroku login
+
+heroku create your-app-name
+
+$ cd my-project/
+$ git init
+$ heroku git:remote -a nonogram-server
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
+
+For existing repositories, simply add the heroku remote
+$ heroku git:remote -a nonogram-server
+
+If Heroku cannot detect your app's language automatically, you can manually specify a buildpack with the heroku buildpacks:set command. Since you're deploying a Flask app, you should set the Python buildpack:
+heroku buildpacks:set heroku/python -a nonogram-server
+
+pip freeze > requirements.txt -> to save all the dependencies of the app
+
+CREATE Procfile in the root dir of the app
+with-->     web: gunicorn app:app
+
+Then:
+git add requirements.txt Procfile in HEROCU ITS WITH -AM 
+git commit -am "Add Heroku deployment files"
+
+And finally Push:
+git push heroku master:main
+or
+git push heroku master:main
+
+Test Locally:
+heroku local web

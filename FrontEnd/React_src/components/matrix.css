@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Quicksand:wght@400;700&display=swap');
+
+body {
+  background-color: rgb(135, 211, 255);
+  font-family: 'Quicksand', sans-serif; /* Default font for the whole page */
+}
+
+h1 {
+  margin-top: 4%;
+  margin-bottom: 3%;
+  font-family: 'Bungee Spice', cursive; 
+  font-size: 7vh;
+}
+
+.score, .lives {
+  font-size: 1.5rem;
+  margin-top: -6px;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  color: rgb(33, 33, 33);
+}
+
+.solve-button {
+  margin-top: 20px;
+  padding: 12px 35px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  background-color: transparent;
+  border: 2px solid #000;
+  font-family: 'Quicksand', sans-serif;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+.solve-button:hover,
+.solve-button:active {
+  background-color: #f3642c;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.backend-grid-list {
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.grid-row, .grid-row-with-hints, .hints-container {
+  display: flex;
+}
+
+.grid-square {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #000;
+  position: relative;
+  margin: 1px;
+}
+
+.x-marked::after {
+  content: 'X';
+  color: red;
+  font-size: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.hints-container {
+  align-items: flex-start;
+}
+
+.top-left-corner-hint {
+  width: 30px;
+  height: 30px;
+}
+
+.col-hint {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*NO NEED FOR THAT its dynamic min-width: 82px; */
+}
+
+.single-col-hint {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.row-hints {
+  width: 33px;
+  text-align: right;
+  padding-right: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 19px;
+}
+
+@media screen and (max-width: 650px) {
+  .grid-square {
+    width: 50px;
+    height: 50px;
+  }
+
+  .col-hint {
+    width: 50px;
+    /* font-size: 20px; */
+  }
+}
+
+.heart-icon {
+  font-size: 33px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.message {
+  margin-top: 2%;
+  font-size: 30px;
+}
+
+
+
+
